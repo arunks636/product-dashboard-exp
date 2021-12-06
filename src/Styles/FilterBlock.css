@@ -1,0 +1,120 @@
+.filter-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-right: 200px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.filter-block .tag-wrap {
+  width: 100%;
+}
+
+.filter-block .tag-wrap p {
+  color: #041131;
+  font-size: 14px;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.filter-block .tag-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.filter-block .tag-wrap ul li {
+  display: inline-block;
+  margin-right: 10px;
+  background-color: #E8E8FF;
+  padding: 10px 40px 10px 10px;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.filter-block .tag-wrap ul li .close {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+
+.filter-block .tag-wrap ul li .close:after, .filter-block .tag-wrap ul li .close:before {
+  position: absolute;
+  left: 0;
+  content: ' ';
+  height: 10px;
+  width: 1px;
+  background-color: #333;
+  top: -5px;
+}
+
+.filter-block .tag-wrap ul li .close:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.filter-block .tag-wrap ul li .close:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.filter-block .filter-btn-wrap {
+  position: absolute;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.filter-block .filter-btn-wrap .clear-all {
+  color: #0F42DF;
+  font-size: 14px;
+  text-decoration: none;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.filter-block .filter-btn-wrap .filter-btn {
+  color: #0F42DF;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px 15px;
+  border: 1px solid #0F42DF;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .filter-block {
+    padding-right: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .filter-block .tag-wrap {
+    text-align: center;
+  }
+  .filter-block .filter-btn-wrap {
+    position: relative;
+    right: 0;
+  }
+}
+/*# sourceMappingURL=FilterBlock.css.map */

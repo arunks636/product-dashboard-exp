@@ -1,0 +1,64 @@
+.product-wrap {
+  padding: 20px;
+}
+
+.product-wrap .tp-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+}
+
+.product-wrap .tp-section h6 {
+  font-size: 20px;
+  color: #041131;
+}
+
+.product-wrap .tp-section .sort-wrap {
+  position: relative;
+  border: 1px solid #E5E5EC;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.product-wrap .tp-section .sort-wrap select {
+  border: 0;
+  background-color: transparent;
+  color: #041131;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.product-wrap .tp-section .sort-wrap:before {
+  content: 'Sort by:';
+  position: absolute;
+  left: -60px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #041131;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  top: 50%;
+}
+
+@media (max-width: 480px) {
+  .product-wrap .tp-section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-wrap .tp-section .sort-wrap {
+    margin-top: 10px;
+  }
+  .product-wrap .tp-section .sort-wrap:before {
+    content: none;
+  }
+}
+/*# sourceMappingURL=Product.css.map */

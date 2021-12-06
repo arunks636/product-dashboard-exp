@@ -1,0 +1,246 @@
+@import '../Styles/Variables/variables';
+
+.filter-body-wrap{
+    background-color: rgba(7, 21, 56, 0.7);
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .filter-body{
+        background-color: #fff;
+        width: 35%;
+        padding: 35px 35px 70px;
+        position: relative;
+        .closeFilter{
+            position: absolute;
+            left: -20px;
+            width: 36px;
+            height: 36px;
+            background-color: #fff;
+            border-radius: 50%;
+            &:after, &:before{
+                position: absolute;
+                left: 17px;
+                top: 10px;
+                content: ' ';
+                height: 15px;
+                width: 3px;
+                background-color: #61636F;
+                border-radius: 3px;
+            }
+
+            &:after{
+                transform: rotate(-45deg);
+            }
+
+            &:before{
+                transform: rotate(45deg);
+            }
+        }
+        .filter-content-block-wrap{
+            height: 90%;
+            overflow-y: auto;
+            padding-top: 5px;
+        }
+
+        .filter-content-block{
+            display: flex;
+            flex-wrap: wrap;
+            padding-bottom: 15px;
+            h4{
+                font-size: 16px;
+                font-weight: 400;
+                color: #041131;
+                margin: 0;
+                padding-bottom: 20px;
+                flex: 1 0 100%;
+            }
+            .more-filter{
+                color: $btnColor;
+                font-size: 14px;
+                flex: 1 0 100%;
+                text-decoration: none;
+                padding-left: 25px;
+            }
+            &.color-block{
+                flex-direction: column;
+                sup{
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    border: 1px solid rgba(0, 0, 0, 0.26);
+                    margin-right: 8px;
+                    vertical-align: middle;
+                    &.black{
+                        background-color: #323F39;
+                    }
+                    &.white{
+                        background-color: #fff;
+                    }
+                    &.blue{
+                        background-color: #005EBB;
+                        border-color: #005EBB;
+                    }
+                    &.pink{
+                        background-color: #FE9898;
+                        border-color: #FE9898;
+                    }
+                }
+            }
+        }
+        h2{
+            color: #041131;
+            font-size: 20px;
+            margin: 0;
+            padding-bottom: 25px;
+            font-weight: 600;
+        }
+        .button-wrap{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            display: flex;
+            .button-wrap-btn{
+                flex: 1 0 50%;
+                font-size: 16px;
+                text-decoration: none;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &.clear-all-btn{
+                    color: #041131;
+                }
+                &.apply-btn{
+                    background-color: #0F42DF;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .filter-check-box {
+        flex: 1 0 50%;
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        color: #041131;
+        sub{
+            font-size: 12px;
+            opacity: 0.5;
+        }
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+            &:checked {
+                ~ {
+                    .checkmark {
+                        background-color: $btnColor;
+                        border-color: $btnColor;
+                        &:after {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover {
+            input {
+                ~ {
+                    .checkmark {
+                        background-color: $btnColor;
+                        border-color: $btnColor;
+                    }
+                }
+            }
+        }
+        .checkmark {
+            &:after {
+                left: 5px;
+                top: 2px;
+                width: 3px;
+                height: 6px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 4px;
+        background-color: #fff;
+        border: 1px solid #BEC1D2;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width: 992px){
+    .filter-body-wrap {
+        .filter-body{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .filter-body-wrap {
+        .filter-check-box{
+            flex: 1 0 100%;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .filter-body-wrap{
+        padding-top: 100px;
+        .filter-body{
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            padding: 25px 0 70px;
+            .closeFilter{
+                right: 8px;
+                left: auto;
+                top: 15px;
+                &:after, &:before{
+                    height: 22px;
+                }
+            }
+            h2{
+                padding: 0 15px 15px;
+                border-bottom: 1px solid #E5E5EC;
+            }
+            .filter-content-block-wrap{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+        }
+    }
+
+}

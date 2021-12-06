@@ -1,0 +1,44 @@
+@import '../Styles/Variables/variables';
+.sideBar{
+    background-color: $darkBlue;
+    width: 80px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    ul{
+        padding: 100px 0 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        li{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            a{
+                padding: 10px;
+                height: 65px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: .5s ease;
+                &:hover, &.active{
+                    background-color: $midBlue;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .sideBar{
+        display: none;
+    }
+}

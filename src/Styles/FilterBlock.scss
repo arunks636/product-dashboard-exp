@@ -1,0 +1,95 @@
+@import '../Styles/Variables/variables';
+
+
+.filter-block{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-right: 200px;
+    padding-left: 20px;
+    padding-top: 20px;
+    .tag-wrap{
+        width: 100%;
+        p{
+            color: #041131;
+            font-size: 14px;
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                display: inline-block;
+                margin-right: 10px;
+                background-color: $lightBlue;
+                padding: 10px 40px 10px 10px;
+                position: relative;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                .close{
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    @include transform-translate(0, -50%);
+                    &:after, &:before{
+                        position: absolute;
+                        left: 0;
+                        content: ' ';
+                        height: 10px;
+                        width: 1px;
+                        background-color: #333;
+                        top: -5px;
+                    }
+                    &:after{
+                        transform: rotate(-45deg);
+                    }                    
+                    &:before{
+                        transform: rotate(45deg);
+                    }
+
+                }
+            }
+        }
+    }
+    .filter-btn-wrap{
+        position: absolute;
+        right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .clear-all{
+            color: #0F42DF;
+            font-size: 14px;
+            text-decoration: none;
+            padding-right: 15px;
+            cursor: pointer;
+        }
+        .filter-btn{
+            color: #0F42DF;
+            font-size: 14px;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1px solid #0F42DF;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    }
+}
+
+@media (max-width: 480px){
+    .filter-block{
+        padding-right: 15px;
+        flex-direction: column;
+        .tag-wrap{
+            text-align: center;
+        }
+        .filter-btn-wrap{
+            position: relative;
+            right: 0;
+        }
+    }
+}

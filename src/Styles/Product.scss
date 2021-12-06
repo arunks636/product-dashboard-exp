@@ -1,0 +1,52 @@
+@import '../Styles/Variables/variables';
+
+.product-wrap{
+    padding: 20px;
+    .tp-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        h6{
+            font-size: 20px;
+            color: #041131;
+        }
+        .sort-wrap{
+            position: relative;
+            border: 1px solid #E5E5EC;
+            border-radius: 5px;
+            padding: 8px;
+            select{
+                border: 0;
+                background-color: transparent;
+                color: #041131;
+                font-size: 14px;
+                cursor: pointer;
+            }
+            &:before{
+                content: 'Sort by:';
+                position: absolute;
+                left: -60px;
+                font-size: 14px;
+                font-weight: 300;
+                color: #041131;
+                @include transform-translate(0, -50%);
+                top: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .product-wrap{
+        .tp-section{
+            flex-direction: column;
+            .sort-wrap{
+                margin-top: 10px;
+                &:before{
+                    content: none;
+                }
+            }
+        }
+    }
+}

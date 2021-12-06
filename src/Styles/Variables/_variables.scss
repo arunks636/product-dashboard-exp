@@ -1,0 +1,17 @@
+// Theme Color variables
+$darkBlue: #0F255F;
+$midBlue: #536DFE;
+$lightBlue: #E8E8FF;
+$textColor: #041131;
+$redHeart: #FF1D00;
+$btnColor: #1750FF;
+
+// Mixin for transform translate browser prefixes
+@mixin transform-translate($x, $y){
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
